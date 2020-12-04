@@ -19,7 +19,7 @@ namespace MusicStore.Controllers
             var albums = GetTopSellingAlbums(5);
             return View(albums);
         }
-        public List<Album> GetTopSellingAlbums(int count)
+        public List<HouseHoldAppliances> GetTopSellingAlbums(int count)
         {
             // Group the order details by album and return
             // the albums with the highest count

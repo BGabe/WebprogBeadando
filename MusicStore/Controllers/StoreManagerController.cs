@@ -32,7 +32,7 @@ namespace MusicStore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Album album = db.Albums.Find(id);
+            HouseHoldAppliances album = db.Albums.Find(id);
             if (album == null)
             {
                 return HttpNotFound();
@@ -56,7 +56,7 @@ namespace MusicStore.Controllers
         //  http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")] Album album)
+        public ActionResult Create([Bind(Include="AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")] HouseHoldAppliances album)
         {
             
             //index
@@ -79,7 +79,7 @@ namespace MusicStore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Album album = db.Albums.Find(id);
+            HouseHoldAppliances album = db.Albums.Find(id);
             if (album == null)
             {
                 return HttpNotFound();
@@ -94,7 +94,7 @@ namespace MusicStore.Controllers
         // http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")] Album album)
+        public ActionResult Edit([Bind(Include="AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")] HouseHoldAppliances album)
         {
             if (ModelState.IsValid)
             {
@@ -114,7 +114,7 @@ namespace MusicStore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Album album = db.Albums.Find(id);
+            HouseHoldAppliances album = db.Albums.Find(id);
             if (album == null)
             {
                 //404
@@ -128,7 +128,7 @@ namespace MusicStore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Album album = db.Albums.Find(id);
+            HouseHoldAppliances album = db.Albums.Find(id);
             db.Albums.Remove(album);
             db.SaveChanges();
             //

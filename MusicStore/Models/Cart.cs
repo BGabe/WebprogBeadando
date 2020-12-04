@@ -6,9 +6,7 @@ using System.Web;
 
 namespace MusicStore.Models
 {
-    /// <summary>
-    /// 
-    /// </summary>
+   
     public class Cart
     {
         
@@ -19,6 +17,6 @@ namespace MusicStore.Models
         public int AlbumId { get; set; }
         public int Count { get; set; }
         public DateTime DateCreated { get; set; }
-        public virtual Album Album { get; set; }
+        public virtual HouseHoldAppliances Type { get; set; }
     }
 }

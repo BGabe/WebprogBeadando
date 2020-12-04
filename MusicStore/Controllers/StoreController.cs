@@ -26,7 +26,7 @@ namespace MusicStore.Controllers
             // Retrieve Genre and its Associated Albums from database
             //Include("Albums")Album
             Genre example = storeDB.Genres.Include("Albums").Single(p => p.Name == genre);
-            List<Album> albums = example.Albums;
+            List<HouseHoldAppliances> albums = example.Albums;
             return View(example);
         }
         //
@@ -37,7 +37,7 @@ namespace MusicStore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Album album = storeDB.Albums.Find(id);
+            HouseHoldAppliances album = storeDB.Albums.Find(id);
             return View(album);
         }
         //

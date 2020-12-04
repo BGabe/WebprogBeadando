@@ -25,7 +25,7 @@ namespace MusicStore.Models
         {
             return GetCart(controller.HttpContext);
         }
-        public void AddToCart(Album album)
+        public void AddToCart(HouseHoldAppliances album)
         {
             // Get the matching cart and album instances
             var cartItem = storeDB.Carts.SingleOrDefault(
