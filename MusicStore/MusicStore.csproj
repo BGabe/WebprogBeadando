@@ -166,26 +166,19 @@
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\StoreManagerController.cs" />
-    <Compile Include="EntityContext\MusicStoreEntities.cs" />
+    <Compile Include="EntityContext\HouseHoldApplianceStoreEntities.cs" />
     <Compile Include="EntityContext\SampleData.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AirConditioner.cs" />
-    <Compile Include="Models\Dehumidifier.cs" />
-    <Compile Include="Models\DishWasher.cs" />
-    <Compile Include="Models\DryMachine.cs" />
-    <Compile Include="Models\Freezer.cs" />
-    <Compile Include="Models\HouseHoldAppliances.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Cart.cs" />
-    <Compile Include="Models\Fridge.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\ShopingCart.cs" />
-    <Compile Include="Models\WashingMachine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\ShoppingCartRemoveViewModel.cs" />

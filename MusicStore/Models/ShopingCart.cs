@@ -9,7 +9,7 @@ namespace MusicStore.Models
 {
     public class ShoppingCart
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        HouseHoldApplianceStoreEntities storeDB = new HouseHoldApplianceStoreEntities();
         string ShoppingCartId { get; set; }
         //ShoppingCartId
         public const string CartSessionKey = "CartId";
@@ -25,18 +25,18 @@ namespace MusicStore.Models
         {
             return GetCart(controller.HttpContext);
         }
-        public void AddToCart(HouseHoldAppliances album)
+        public void AddToCart(Product product)
         {
             // Get the matching cart and album instances
             var cartItem = storeDB.Carts.SingleOrDefault(
                 c => c.CartId == ShoppingCartId
-                && c.AlbumId == album.AlbumId);
+                && c.ProductId == product.ProductId);
             if (cartItem == null)
             {
                 // Create a new cart item if no cart item exists
                 cartItem = new Cart()
                 {
-                    AlbumId=album.AlbumId,
+                    ProductId=product.ProductId,
                     CartId=ShoppingCartId,
                     Count=1,
                     DateCreated=DateTime.Now
@@ -101,7 +101,7 @@ namespace MusicStore.Models
             // sum all album price totals to get the cart total
             decimal? total = (from cartItem in storeDB.Carts
                               where cartItem.CartId == ShoppingCartId
-                              select (int?)cartItem.Count * cartItem.Album.Price)
+                              select (int?)cartItem.Count * cartItem.Product.Price)
                                 .Sum();
             return total ?? 0;
         }
@@ -115,13 +115,13 @@ namespace MusicStore.Models
             {
                 var orderDetail=new OrderDetail()
                 {
-                    AlbumId=item.AlbumId,
+                    ProductId = item.ProductId,
                     OrderId=order.OrderId,
-                    UnitPrice=item.Album.Price,
+                    UnitPrice=item.Product.Price,
                     Quantity=item.Count
                 };
                 // Set the order total of the shopping cart
-                orderTotal += (item.Count * item.Album.Price);
+                orderTotal += (item.Count * item.Product.Price);
                 storeDB.OrderDetails.Add(orderDetail);
             }
             // Set the order's total to the orderTotal count

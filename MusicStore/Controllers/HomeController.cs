@@ -10,23 +10,24 @@ namespace MusicStore.Controllers
 {
     public class HomeController : Controller
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        HouseHoldApplianceStoreEntities storeDB = new HouseHoldApplianceStoreEntities();
         //
         // GET: /Home/
         public ActionResult Index()
         {
             // Get most popular albums
-            var albums = GetTopSellingAlbums(5);
-            return View(albums);
+            /*var products = GetTopSellingProducts(5);
+            return View(products);*/
+            return View();
         }
-        public List<HouseHoldAppliances> GetTopSellingAlbums(int count)
+        /*public List<Product> GetTopSellingProducts(int count)
         {
             // Group the order details by album and return
             // the albums with the highest count
-            return storeDB.Albums
+            return storeDB.Products
                 .OrderByDescending(a => a.OrderDetails.Count())
                 .Take(count)
                 .ToList();
-        }
+        }*/
 	}
 }

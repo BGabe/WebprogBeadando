@@ -10,10 +10,10 @@ namespace MusicStore.Models
     {
         public int OrderDetailId { get; set; }
         public int OrderId { get; set; }
-        public int HouseHoldAppliancesID { get; set; }
+        public int ProductId { get; set; }
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
-        public virtual HouseHoldAppliances Type { get; set; }
+        public virtual Product Type { get; set; }
         public virtual Order Order { get; set; }
     }
 }

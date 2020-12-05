@@ -11,7 +11,7 @@ namespace MusicStore.Controllers
 {
     public class ShoppingCartController : Controller
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        HouseHoldApplianceStoreEntities storeDB = new HouseHoldApplianceStoreEntities();
         //
         // GET: /ShoppingCart/
         public ActionResult Index()
@@ -30,11 +30,11 @@ namespace MusicStore.Controllers
         public ActionResult AddToCart(int id)
         {
             // Retrieve the album from the database
-            var addedAlbum = storeDB.Albums
-            .Single(album => album.AlbumId == id);
+            var addedProduct = storeDB.Products
+            .Single(product => product.ProductId == id);
             // Add it to the shopping cart
             var cart = ShoppingCart.GetCart(this.HttpContext);
-            cart.AddToCart(addedAlbum);
+            cart.AddToCart(addedProduct);
             // Go back to the main store page for more shopping
             return RedirectToAction("Index");
         }
@@ -46,14 +46,14 @@ namespace MusicStore.Controllers
             // Remove the item from the cart
             var cart = ShoppingCart.GetCart(this.HttpContext);
             // Get the name of the album to display confirmation
-            string albumName = storeDB.Carts
-            .Single(item => item.RecordId == id).Album.Title;
+            string productName = storeDB.Carts
+            .Single(item => item.RecordId == id).Product.Name;
             // Remove from cart
             int itemCount = cart.RemoveFromCart(id);
             // Display the confirmation message
             var results = new ShoppingCartRemoveViewModel()
             {
-                Message = Server.HtmlEncode(albumName) +
+                Message = Server.HtmlEncode(productName) +
                 "has been removed from your shopping cart.",
                 CartTotal=cart.GetTotal(),
                 CartCount=cart.GetCount(),

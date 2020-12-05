@@ -7,22 +7,19 @@ using System.Web;
 
 namespace MusicStore.EntityContext
 {
-    public class MusicStoreEntities : DbContext
+    public class HouseHoldApplianceStoreEntities : DbContext
     {
-        public DbSet<HouseHoldAppliances> Albums { get; set; }
 
-        public DbSet<Genre> Genres { get; set; }
 
-        public DbSet<Artist> Artists { get; set; }
 
+        public DbSet<Product> Products { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         //javít autentikációhoz
         public DbSet<Mvc3ToolsUpdateWeb_Default.Models.LogOnModel> logOnModels { get; set; }
 
-        public MusicStoreEntities()
-            
+        public HouseHoldApplianceStoreEntities()
         {
 
         }

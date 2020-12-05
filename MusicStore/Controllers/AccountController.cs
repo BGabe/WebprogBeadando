@@ -34,7 +34,7 @@ namespace Mvc3ToolsUpdateWeb_Default.Controllers
                 //Admin
                 //admin
                 //ide jön a javítás - adatbázisból lekérdezni a usert
-                MusicStoreEntities storeDB = new MusicStoreEntities();
+                HouseHoldApplianceStoreEntities storeDB = new HouseHoldApplianceStoreEntities();
                 bool logintrue=storeDB.logOnModels.Any(u => model.UserName.ToLower() == u
                .UserName.ToLower() && model.Password
                == u.Password);
@@ -89,7 +89,7 @@ namespace Mvc3ToolsUpdateWeb_Default.Controllers
         {
             if (ModelState.IsValid)
             {
-                MusicStoreEntities storeDB = new MusicStoreEntities();
+                HouseHoldApplianceStoreEntities storeDB = new HouseHoldApplianceStoreEntities();
                 storeDB.logOnModels.Add(new LogOnModel(model.UserName, model.Password));
                 storeDB.SaveChanges();
 

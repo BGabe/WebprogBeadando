@@ -11,23 +11,21 @@ namespace MusicStore.Controllers
 {
     public class StoreController : Controller
     {
-        private MusicStoreEntities storeDB = new MusicStoreEntities();
+        private HouseHoldApplianceStoreEntities storeDB = new HouseHoldApplianceStoreEntities();
         //
         // GET: /Store/
         public ActionResult Index()
         {
-            var genres = storeDB.Genres.ToList();
-            return View(genres);
+            var types = storeDB.Products.Select(p => p.Type).ToList();
+            return View(types);
         }
         //
         // GET: /Store/Browse
-        public ActionResult Browse(string genre)
+        public ActionResult Browse(string type)
         {
             // Retrieve Genre and its Associated Albums from database
-            //Include("Albums")Album
-            Genre example = storeDB.Genres.Include("Albums").Single(p => p.Name == genre);
-            List<HouseHoldAppliances> albums = example.Albums;
-            return View(example);
+            List<Product> productsList = storeDB.Products.Where(p => p.Type == type).ToList();
+            return View(productsList);
         }
         //
         // GET: /Store/Details
@@ -37,16 +35,16 @@ namespace MusicStore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            HouseHoldAppliances album = storeDB.Albums.Find(id);
-            return View(album);
+            Product product = storeDB.Products.Find(id);
+            return View(product);
         }
         //
         // GET: /Store/GenreMenu
         [ChildActionOnly]
-        public ActionResult GenreMenu()
+        public ActionResult TypesMenu()
         {
-            var genres = storeDB.Genres.ToList();
-            return PartialView(genres);
+            var types = storeDB.Products.Select(p => p.Type).ToList();
+            return PartialView(types);
         }
         protected override void Dispose(bool disposing)
         {

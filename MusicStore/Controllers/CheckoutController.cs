@@ -11,7 +11,7 @@ namespace MusicStore.Controllers
     [Authorize]
     public class CheckoutController : Controller
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        HouseHoldApplianceStoreEntities storeDB = new HouseHoldApplianceStoreEntities();
         private const string PromoCode = "FREE";
         //
         // GET: /Checkout/
