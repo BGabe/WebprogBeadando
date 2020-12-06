@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div id="themeSlider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#themeSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#themeSlider" data-slide-to="1"></li>
+        <li data-target="#themeSlider" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="imgOverlay"></div>
+            <img style="height:320px;width:100%" src="../Content/Images/huto.png" alt="First slide">
+            <div class="carousel-caption">
+                <h3>Hűtők</h3>
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="imgOverlay"></div>
+            <img style="height:320px;width:100%" src="../Content/Images/mosogep.png" alt="Second slide">
+            <div class="carousel-caption">
+                <h3>Mosógépek</h3>
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="imgOverlay"></div>
+            <img style="height:320px;width:100%" src="../Content/Images/mosogatogep.png" alt="Third slide">
+            <div class="carousel-caption">
+                <h3>Mosogatógépek</h3>
+
+            </div>
+        </div>
+    </div>
+
+    <a class="left carousel-control" href="#themeSlider" data-slide="prev">
+        <span class="fa fa-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#themeSlider" data-slide="next">
+        <span class="fa fa-chevron-right"></span>
+    </a>
+</div>
+<div class="olcontent f1"><h2 style="color:black;">Termék/Kategória Keresése</h2></div>
+<div class="olSearch fr">
+    <input type="text" placeholder="Írja be a keresett terméket" name="searchKey" class="inputComn houseText form-control">
+    <div class="searchIcon">
+        <button type="button" class="searchBtn">
+            <img src="~/Content/Images/search.svg" />
+        </button>
+    </div>
+
+
+</div>
