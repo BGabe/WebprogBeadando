@@ -168,3 +168,7 @@ C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\obj\Debug\Hous
 C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\obj\Debug\HouseHoldApplianceStore.dll
 C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\obj\Debug\HouseHoldApplianceStore.pdb
 C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\obj\Debug\HouseHoldApplianceStore.csprojAssemblyReference.cache
+C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\bin\PagedList.dll
+C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\bin\PagedList.Mvc.dll
+C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\bin\PagedList.xml
+C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\bin\PagedList.Mvc.xml
