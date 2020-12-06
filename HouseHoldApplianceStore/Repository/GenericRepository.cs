@@ -19,7 +19,10 @@ namespace HouseHoldApplianceStore.Repository
             _DBEntity = DBEntity;
             _dbSet = DBEntity.Set<Tbl_Entity>();
         }
-
+        public IEnumerable<Tbl_Entity> GetProduct()
+        {
+            return _dbSet.ToList();
+        }
         public void Add(Tbl_Entity entitiy)
         {
             _dbSet.Add(entitiy);
@@ -113,6 +116,7 @@ namespace HouseHoldApplianceStore.Repository
         {
             _dbSet.Attach(entitiy);
             _DBEntity.Entry(entitiy).State = EntityState.Modified;
+            _DBEntity.SaveChanges();
         }
 
         public void UpdateByWhereClause(Expression<Func<Tbl_Entity, bool>> wherePredict, Action<Tbl_Entity> ForEachPredict)

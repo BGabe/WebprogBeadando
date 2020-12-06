@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HouseHoldApplianceStore.Models.Home;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,10 @@ namespace HouseHoldApplianceStore.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
-            return View();
+            HomeIndexViewModel model = new HomeIndexViewModel();
+            return View(model.CreateModel(search));
         }
 
         public ActionResult About()

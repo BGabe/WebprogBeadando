@@ -8,6 +8,7 @@ namespace HouseHoldApplianceStore.Repository
 {
     public interface IRepository<Tbl_Entitiy> where Tbl_Entitiy:class
     {
+        IEnumerable<Tbl_Entitiy> GetProduct();
         IEnumerable<Tbl_Entitiy> GetAllRecords();
         IQueryable<Tbl_Entitiy> GetAllRecordsIQueryable();
         int GetAllRecordCount();

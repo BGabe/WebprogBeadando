@@ -1,0 +1,61 @@
+﻿@model List<HouseHoldApplianceStore.DAL.Tbl_Category>
+@{
+    ViewBag.Title = "Categories";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#">Irányítópult</a>
+        </li>
+        <li class="breadcrumb-item active">Kategóriák</li>
+    </ol>
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Kategória Részletek
+            <a href="../Admin/AddCategory" class="btn btn-info pull-right fa fa-plus">Új létrehozása</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Széria szám</th>
+                            <th>Kategória Neve</th>
+                            <th>Akció</th>
+
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Széria szám</th>
+                            <th>Kategória Neve</th>
+                            <th>Akció</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <td>@(Model.IndexOf(item)+1)</td>
+                                <td>@item.CategoryName</td>
+                                <td>
+                                    @Html.ActionLink("Edit", "CategoryEdit", new { catId = item.CategoryId })
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+

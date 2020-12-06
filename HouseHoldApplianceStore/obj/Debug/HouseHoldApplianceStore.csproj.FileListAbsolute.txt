@@ -163,8 +163,8 @@ C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\bin\Microsoft.
 C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\obj\Debug\HouseHoldApplianceStore.csprojAssemblyReference.cache
 C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\obj\Debug\HouseHoldApplianceStore.csproj.CoreCompileInputs.cache
 C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\obj\Debug\HouseHoldApplianceStore.csproj.CopyComplete
 C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\obj\Debug\HouseHoldApplianceStore.dll
 C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\obj\Debug\HouseHoldApplianceStore.pdb
+C:\Users\gabor\Desktop\WebprogBeadandoTwo\HouseHoldApplianceStore\obj\Debug\HouseHoldApplianceStore.csprojAssemblyReference.cache

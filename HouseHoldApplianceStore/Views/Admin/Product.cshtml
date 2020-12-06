@@ -1,0 +1,54 @@
+﻿@model IEnumerable<HouseHoldApplianceStore.DAL.Tbl_Product>
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Termék
+        <a href="../Admin/ProductAdd" class="btn btn-info pull-right fa fa-plus">Új létrehozása</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Széria szám</th>
+                        <th>Termék Neve</th>
+                        <th>Akció</th>
+
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Széria szám</th>
+                        <th>Termék Neve</th>
+                        <th>Akció</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        int count = 1;
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.ProductName</td>
+                            <td>
+
+                                @Html.ActionLink("Edit", "ProductEdit", new { productId = item.ProductId })
+                            </td>
+
+                        </tr>
+                        count++;
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
