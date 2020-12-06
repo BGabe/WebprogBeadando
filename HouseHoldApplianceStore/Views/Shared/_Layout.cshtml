@@ -12,79 +12,90 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-
-    <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-6">
-            <div class="logo">
-                <h1><a href="#">HKGY</a></h1>
-                <P>Háztartási Gépek Szakértőktől</P>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="logo">
+                    <h1><a href="#">HKGY <span>Webáruház</span></a></h1>
+                    <p>Háztartásigépek Szakértőltől</p>
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-6 col-sm-6 col-xs-6">
-            @*<div class="account">
-            <ul>
-                <li>
-                    <div class="hidden-xs">
-                        <h4><a>Hívjon</a></h4>
-                        <p>06########</p>
-                    </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                @*<div class="account">
+                       <ul>
+                           <li>
+                               <div class="hidden-xs">
+                                   <h4><a>Call</a></h4>
+                                   <p>018##-######</p>
+                               </div>
 
-                    <div class="visible-xs">
+                               <div class="visible-xs">
 
-                        <p>0670342111</p>
-                    </div>
-                </li>
-            </ul>
-        </div>*@
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Kosár <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        @if (Session["cart"] != null)
-                        {
-                            foreach (Item item in (List<Item>)Session["cart"])
+                                   <p>018##-######</p>
+                               </div>
+
+                           </li>
+                       </ul>
+
+                    </div>*@
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Kosár <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            @if (Session["cart"] != null)
                             {
-                                <li>
-                                    <a href="@Url.Action("RemoveFromCart", "Home", new { productId=item.Product.ProductId})">@item.Product.ProductName (@item.Quantity) <i class="fa fa-times"></i></a>
-                                </li>
+                                foreach (Item item in (List<Item>)Session["cart"])
+                                {
+                                    <li>
+                                        <a href="@Url.Action("RemoveFromCart", "Home", new { productId=item.Product.ProductId})">@item.Product.ProductName (@item.Quantity) <i class="fa fa-times"></i></a>
+                                    </li>
+                                }
                             }
-                        }
-                        <li class="divider"></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="nav-menus">
-                <ul class="nav nav-pills">
-                    <li class="active"><a style="border-radius: initial;" href="#">Kezdőlap</a></li>
-                    <li ><a style="border-radius: initial;" href="#">Elérhetőség</a></li>
-                    <li ><a style="border-radius: initial;" href="#">Rólunk</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("Checkout","Home")">Rendelés</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="nav-menus">
+
+                    <ul class="nav nav-pills">
+                        <li class="active"><a style="border-radius:initial;" href="#">Kezdőoldal</a></li>
+                        <li><a style="border-radius:initial;" href="#">Elérhetőség</a></li>
+                        <li><a style="border-radius:initial;" href="#">Rólunk</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
         @RenderBody()
         <hr />
         <footer>
             <div class="row">
                 <div class="col-md-12 copyright">
+
                     <div class="col-md-6 col-sm-6 copyright-left">
-                        <p>&copy; @DateTime.Now.Year - HKGY Webáruház. Minden jog fentartva</p>
+                        <p>&copy; @DateTime.Now.Year - HKGY Webáruház. Minden Jog Fentartva.</p>
                     </div>
 
                     <div class="col-md-6 col-sm-6 copyright-right">
+
                         <ul class="list-unstyled list-social">
                             <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>                           
                         </ul>
                     </div>
                 </div>
             </div>
+
         </footer>
     </div>
 

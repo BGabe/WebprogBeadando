@@ -1675,6 +1675,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="ProductImg\placeholder-image.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="DAL\Model1.edmx">
@@ -1804,10 +1805,11 @@
     <Content Include="Views\Admin\ProductEdit.cshtml" />
     <Content Include="Views\Admin\ProductAdd.cshtml" />
     <Content Include="Views\Admin\CategoryEdit.cshtml" />
+    <Content Include="Views\Home\CheckoutDetails.cshtml" />
+    <Content Include="Views\Home\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ProductImg\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
