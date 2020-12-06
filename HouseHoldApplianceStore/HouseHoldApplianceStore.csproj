@@ -187,6 +187,7 @@
     <Content Include="Content\Images\huto.png" />
     <Content Include="Content\Images\mosogatogep.png" />
     <Content Include="Content\Images\mosogep.png" />
+    <Content Include="Content\Images\placeholder-image.png" />
     <Content Include="Content\Images\search.svg" />
     <Content Include="Content\MainStyle.css" />
     <Content Include="favicon.ico" />
